@@ -10,7 +10,9 @@ module.exports = {
 
         if (!planet) {
             res.send("Esse planeta não existe!");
-        }
+        }else{
+            return res.send(`O satelite ${name} foi cadastrado no planeta ${planet.name}`)
+         }
 
         const satelite = await Satelite.create({name, serial_number, planetId});
         return res.json(satelite);

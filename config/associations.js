@@ -7,7 +7,7 @@ const Spaceship = require("../models/Spaceship");
 Planet.hasOne(Satelite, {onDelete: "CASCADE", onUpdate: "CASCADE"});
 Satelite.belongsTo(Planet, {foreignKey: "planetId", as: "planet"});
 
-
+// associação com vários
 // Planet.hasMany(Satelite, {onDelete: "CASCADE", onUpdate: "CASCADE"});
 // Satelite.belongsTo(Planet, {foreignKey: "planetId", as: "planet"});
 
